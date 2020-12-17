@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Zapfino Forte LT Pro';
+  src: url('ZapfinoForteLTPro.woff2') format('woff2'),
+      url('ZapfinoForteLTPro.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/*.my-gallery {
+  width: 100%;
+  float: left;
+}*/
+.my-gallery figure {
+  display: block;
+  float: left;
+  margin: 0 0px 0px 0;
+  /*width: 150px;*/
+}
+.my-gallery figcaption {
+  display: none;
+}
+
+body {
+  max-width: 40em;
+  padding: 0 .62em;
+  margin: 1em auto;
+  font: 1.2em/1.62 sans-serif;
+  color: #222;
+}
+
+h1, h2, h3 {line-height: 1.2;}
+h1.header {
+  /*border-bottom: 5px solid #e85d93;*/
+  display: inline;
+  /*padding-bottom: 5em;*/
+
+  font-family: 'Zapfino Extra LT Pro';
+  font-weight: normal;
+  font-style: italic;
+  font-size: 100px;
+}
+
+header {
+  margin: 1em auto;
+  padding: 0 0 2em 0;
+}
+
+/*li {display: inline;}
+ul, li {margin: 0; padding: .7em;}*/
+
+a {
+  text-decoration: none;
+  color: #e85d93;
+}
+
+.my-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  grid-gap: 0.5em;
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
+
+  justify-items: center;
+  align-items: center;
+}
+
+.hor {grid-column: span 3;}
+.ver {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.big {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.my-gallery img {
+  max-width: 100%;
+  heigth: auto;
+}

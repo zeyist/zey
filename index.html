@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>zey</title>
+  <link rel="stylesheet" href="static/photoswipe/photoswipe.css">
+  <link rel="stylesheet" href="static/photoswipe/default-skin/default-skin.css">
+  <link rel="stylesheet" href="style/style.css">
+  <script src="static/photoswipe/photoswipe.js"></script>
+  <script src="static/photoswipe/photoswipe-ui-default.js"></script>    
+</head>
+<body>
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides. 
+          PhotoSwipe keeps only 3 of them in the DOM to save memory.
+          Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+
+            <!--  Controls are self-explanatory. Order can be changed. -->
+
+            <div class="pswp__counter"></div>
+
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+            <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+            <!-- element will get class pswp__preloader--active when preloader is running -->
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div> 
+          </div>
+
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+          </button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+          </button>
+
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <center>
+      <h1 class="header">Zey</h1>
+    </center>
+  </header>
+
+  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/0.jpg" itemprop="contentUrl" data-size="1280x1811">
+        <img src="static/images/0.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"People only have substance within the memories of other people. And that's why there were all kinds of mes. There weren't a lot of mes per se, I was just inside all sorts of people, that's all." - Lain Iwakura, Serial Experiments Lain</figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/1.png" itemprop="contentUrl" data-size="1000x800">
+        <img src="static/images/1.png" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtu.be/GSdYPkgCvtE">Jinsang - Solitude</a></figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/2.jpg" itemprop="contentUrl" data-size="1280x864">
+        <img src="static/images/2.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Would I be forgiven for that? For just taking the easy way out…?" - Miki, Toumei Ningen no Hone</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/2-z.jpg" itemprop="contentUrl" data-size="720x1280">
+        <img src="static/images/2-z.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"I've seen a tree like this somewere... When was it? So long ago that I've forgotten... Under a sky where the clouds made sound as they moved. The black horizon swelled and from it grew a huge tree. It sucked the life from the ground... And it's pulsing branches reached up, as if to grasp something..." - Boy, Angel's Egg</figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/3.jpg" itemprop="contentUrl" data-size="1280x960">
+        <img src="static/images/3.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"You’re Puss in Boots, the one who tricks the prince. He hides who he really is and pretends to be someone else forever. So in time he becomes that person, so his lie becomes the truth, see? He transcends the mask. Don’t you get it? That’s how he finds happiness. That’s pretty good, right?" – Eri Ninamori, FLCL</figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/4.jpg" itemprop="contentUrl" data-size="1600x1297">
+        <img src="static/images/4.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Are you afraid of other people? I know that by keeping others at a distance you avoid a betrayal of your trust, but you must endure the loneliness. Man can never completely erase this sadness, because all men are fundamentally alone. Pain is something man must carry in his heart, and since the heart feels pain so easily, some believe that life is pain." – Kaworu Nagisa, Neon Genesis Evangelion</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/5.jpg" itemprop="contentUrl" data-size="1067x1600">
+        <img src="static/images/5.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtube.com/playlist?list=OLAK5uy_m5XFiJ4UDaCHu1Xrq1UYOv10HsLxL_6rI">Björk - Homogenic</a></figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/5-z.jpg" itemprop="contentUrl" data-size="1280x720">
+        <img src="static/images/5-z.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"In this world, wherever there is light – there are also shadows. As long as the concept of winners exists, there must also be losers. The selfish desire of wanting to maintain peace causes wars, and hatred is born to protect love." – Madara Uchiha, Naruto Shippuuden</figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/6.jpg" itemprop="contentUrl" data-size="1679x1163">
+        <img src="static/images/6.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"When a man learns to love, he must bear the risk of hatred." – Madara Uchiha, Naruto Shippuuden</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/7.jpg" itemprop="contentUrl" data-size="1067x1600">
+        <img src="static/images/7.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Rationalism isn’t the only thing that drives human action. We are foolish creatures." – Tanya Degurechaff, Youjo Senki</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/8.jpg" itemprop="contentUrl" data-size="3000x4000">
+        <img src="static/images/8.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"All things change in a dynamic environment. Your effort to remain what you are is what limits you." - Puppet Master, Ghost in the Shell</figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/9.jpg" itemprop="contentUrl" data-size="2642x3967">
+        <img src="static/images/9.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"You’ve got to enjoy life, or else you’ll end up wasting it." – Revy Rebecca, Black Lagoon</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/10.jpg" itemprop="contentUrl" data-size="1500x1875">
+        <img src="static/images/10.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtube.com/playlist?list=OLAK5uy_kWUPVbiG10lt7uSM8kfSUac-MQVL5Kswc">Viktor Vaughn - Vaudeville Villain</a></figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/10-z.jpg" itemprop="contentUrl" data-size="720x1280">
+        <img src="static/images/10-z.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Maybe you, I and the fish only exist in the memory of a person who is long gone. Maybe no one really exists and it's only raining outside." - Boy, Angel's Egg</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/11.jpg" itemprop="contentUrl" data-size="800x1024">
+        <img src="static/images/11.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtu.be/HI3-Lwpu2QM">The Poppy Family - Of Cities And Escapes</a></figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/12.jpg" itemprop="contentUrl" data-size="2000x1333">
+        <img src="static/images/12.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtube.com/playlist?list=OLAK5uy_mhFLrlqeLpQH4w9QR1MMxKTOlz0OBB0WM">PVRIS - All We Know Of Heaven, All We Need Of Hell</a></figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/13.jpg" itemprop="contentUrl" data-size="1872x1248">
+        <img src="static/images/13.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Survival of the fittest is the law of nature. We deceive or we are deceived. Thus, we flourish or perish. Nothing good ever happened to me when I trusted others. That is the lesson." – Faye Valentine, Cowboy Bebop</figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/13-z.jpg" itemprop="contentUrl" data-size="1280x720">
+        <img src="static/images/13-z.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"There was no reason for me to stay in the real world any longer. In the real world, it didn’t matter if I was there or not. When I realized that, I was no longer afraid of losing my body." – Chisa Yomoda, Serial Experiments Lain</figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/14.jpg" itemprop="contentUrl" data-size="3072x2048">
+        <img src="static/images/14.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Never underestimate the ability of the human animal to adapt to its environment." - Misato Katsuragi, Neon Genesis Evangelion</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/15.jpg" itemprop="contentUrl" data-size="1480x1850">
+        <img src="static/images/15.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtu.be/_SgWum9kHYk">Bôa - Duvet</a></figcaption>
+    </figure>
+
+    <figure class="big" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/15-z.jpg" itemprop="contentUrl" data-size="1210x1280">
+        <img src="static/images/15-z.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"I guess once you start doubting, there's no end to it." - Batou, Ghost in the Shell</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/16.jpg" itemprop="contentUrl" data-size="1356x2048">
+        <img src="static/images/16.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Don’t improvise what you cannot handle." – Madara Uchiha, Naruto Shippuuden</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/17.jpg" itemprop="contentUrl" data-size="1356x2048">
+        <img src="static/images/17.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"No matter where you go, everyone’s connected." – Lain Iwakura, Serial Experiments Lain</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/18.jpg" itemprop="contentUrl" data-size="1356x2048">
+        <img src="static/images/18.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Resenting the past won't change anything. It just makes me want to kill myself! I have some control over my future, but there's no changing the past! I'll simply do what I can right now." - Tomoko Kuroki, WataMote</figcaption>
+    </figure>
+
+    <figure class="big" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/19.jpg" itemprop="contentUrl" data-size="1620x1688">
+        <img src="static/images/19.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"I enjoy cooking, painting and playing music. There are so many books to read here… But sometimes, the most fun comes from just doing nothing. I think someone close to me taught me that a long time ago. Maybe my father…" - Claes, Gunslinger Girl</figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/20.jpg" itemprop="contentUrl" data-size="2048x1356">
+        <img src="static/images/20.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtu.be/ZFI7xoIHt-Q">Neroche - Moontide Theory</a></figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/20-z.jpg" itemprop="contentUrl" data-size="1280x960">
+        <img src="static/images/20-z.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtu.be/HTr7bqKHvgE">Gojira - The Art of Dying</a></figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/21.jpg" itemprop="contentUrl" data-size="1280x819">
+        <img src="static/images/21.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"If you’re not remembered, then you never existed." – Lain Iwakura, Serial Experiments Lain</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/21-z.jpg" itemprop="contentUrl" data-size="720x1280">
+        <img src="static/images/21-z.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"That high school girl looked kinda sad. Seems like a little kindness might help, but you’d need some maturity to treat her that way." – Commander Amarao, FLCL</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/22.jpg" itemprop="contentUrl" data-size="2000x3000">
+        <img src="static/images/22.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Up until then, I'd never met anyone who looked at me so earnestly, and there was never anyone who really paid attention to what I said. I realized that I'm still right here - that I'm still alive. In that moment I was happy. Maybe it's not something anyone can understand , but I was happy" - Yuu, Watashitachi no Shiawase na Jikan</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/23.jpg" itemprop="contentUrl" data-size="4000x6000">
+        <img src="static/images/23.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Soul! Body! Truth! Salvation! Vengeance!" - Texhnolyze</figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/23-z.jpg" itemprop="contentUrl" data-size="1280x720">
+        <img src="static/images/23-z.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"A lie is truth, until you recognize it as a lie. To see the truth behind those lies is probably the right thing to do. However, it may not necessarily bring happiness. Lies are happiness." – Hoody, Ergo Proxy</figcaption>
+    </figure>
+
+    <figure class="big" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/24.jpg" itemprop="contentUrl" data-size="2000x2000">
+        <img src="static/images/24.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtube.com/playlist?list=PL228FAD202E1D8335">Death Grips - Ex Military</a></figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/25.jpg" itemprop="contentUrl" data-size="1569x2353">
+        <img src="static/images/25.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtube.com/playlist?list=OLAK5uy_naXMwnvzdMo9gEtZB0H3FLK4PtBVGLwdk">Kovacs - Shades Of Black</a></figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/26.jpg" itemprop="contentUrl" data-size="2048x1536">
+        <img src="static/images/26.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"So fucking what if I'm not you?! That doesn't mean it's okay for you to give up! If you do, I'll never forgive you as long as I live. God knows I'm not perfect either. I've made tons of stupid mistakes and later I regretted them. And I've done it over and over again, thousands of times. A cycle of hollow joy and vicious self-hatred. But even so, every time I learned something about myself.” – Misato Katsuragi, Neon Genesis Evangelion</figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/27.jpg" itemprop="contentUrl" data-size="1280x864">
+        <img src="static/images/27.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtube.com/playlist?list=PLJ7cPtBXj9OsexIEVKRjXAQU77CPMPOWF">Crystal Castles - Crystal Castles</a></figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/28.jpg" itemprop="contentUrl" data-size="1280x1920">
+        <img src="static/images/28.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"It takes an idiot to do cool things. That’s why it’s cool." – Haruko Haruhara, FLCL</figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/28-z.jpg" itemprop="contentUrl" data-size="1280x720">
+        <img src="static/images/28-z.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Dreams breathe life into men and can cage them in suffering. Men live and die by their dreams but long after they're abandoned, they still smolder deep in men's hearts." - Griffith, Berserk</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/29.jpg" itemprop="contentUrl" data-size="1080x1350">
+        <img src="static/images/29.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtube.com/playlist?list=OLAK5uy_mBzBnKYE4A1RV1FLTN5YJzJkz6AXD4F00">Agnes Obel - Riverside</a></figcaption>
+    </figure>
+
+    <figure class="big" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/30.jpg" itemprop="contentUrl" data-size="1080x1080">
+        <img src="static/images/30.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtube.com/playlist?list=OLAK5uy_lb2-vYgwNcRwJvGIWX-3rxoHXamUY0VvU">Björk - Debut</a></figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/30-z.jpg" itemprop="contentUrl" data-size="1280x960">
+        <img src="static/images/30-z.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">“When I saw it, I was reminded of a passage by my favorite writer, Jang Jeongil: “We must kill the prodigal son. He brings worse things with him. Nothing makes us feel quite so small as the son who has returned. The true prodigal son must go, with nary a drop of water nor a crumb of bread, without even a camel, he must go to the ends of the desert and die there. And not just there, but everywhere!” - ?, Watashitachi no Shiawase na Jikan</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/31.jpg" itemprop="contentUrl" data-size="680x1024">
+        <img src="static/images/31.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtu.be/QXMUY4deXs0">Audio Bullys - We Don't Care</a></figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/32.jpg" itemprop="contentUrl" data-size="1280x1901">
+        <img src="static/images/32.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtu.be/8mGBaXPlri8">t.A.T.u. - All The Things She Said</a></figcaption>
+    </figure>
+
+    <figure class="big" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/33.jpg" itemprop="contentUrl" data-size="1280x1354">
+        <img src="static/images/33.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Miracles are illusions caused by insufficient observation and understanding. They’re just… glorious misunderstandings." – Tanya Degurechaff, Youjo Senki</figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/33-z.jpg" itemprop="contentUrl" data-size="720x527">
+        <img src="static/images/33-z.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"The thread of human hope is spun with the flax of sorrow." – Kaworu Nagisa, Neon Genesis Evangelion</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/34.jpg" itemprop="contentUrl" data-size="1280x1920">
+        <img src="static/images/34.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"The physical body exists at a less evolved plane only to verify one’s existence in the universe." – Miho Iwakura, Serial Experiments Lain</figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/35.jpg" itemprop="contentUrl" data-size="1280x837">
+        <img src="static/images/35.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Hey, I didn’t know boys felt like this inside." – Haruko Haruhara, FLCL</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/35-z.jpg" itemprop="contentUrl" data-size="960x1280">
+        <img src="static/images/35-z.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Judging by the way you fight, it seems you value victory more than your own life." - Griffith, Berserk</figcaption>
+    </figure>
+
+    <figure class="big" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/36.jpg" itemprop="contentUrl" data-size="800x800">
+        <img src="static/images/36.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtube.com/playlist?list=PLxzSZG7g8c8x6GYz_FcNr-3zPQ7npP6WF">Radiohead - OK Computer</a></figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/37.jpg" itemprop="contentUrl" data-size="1024x683">
+        <img src="static/images/37.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"All those who wander in the darkness seek the light, but when they reach the light, they turn away their eyes from the blinding glare." – Kazkis Hauer, Ergo Proxy</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/38.jpg" itemprop="contentUrl" data-size="1280x1709">
+        <img src="static/images/38.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"We weep for the blood of a bird, but not for the blood of a fish. Blessed are those with a voice. If the dolls could speak, no doubt they’d scream, 'I didn’t want to become human'." – Motoko Kusanagi, Ghost in the Shell</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/38-z.jpg" itemprop="contentUrl" data-size="960x1280">
+        <img src="static/images/38-z.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Whatever happens, happens." – Spike Spiegel, Cowboy Bebop</figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/39.jpg" itemprop="contentUrl" data-size="1280x854">
+        <img src="static/images/39.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtube.com/playlist?list=PLlCcKoJyGmMXZALukfTsXuVL0wipGB1se">Midori - Hello everyone. Nice to meet you. We are Midori.</a></figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/40.jpg" itemprop="contentUrl" data-size="1025x1280">
+        <img src="static/images/40.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Men always seem to think about their past before they die, as though they were frantically searching for proof that they truly lived." – Jet Black, Cowboy Bebop</figcaption>
+    </figure>
+
+    <figure class="big" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/40-z.jpg" itemprop="contentUrl" data-size="1171x1280">
+        <img src="static/images/40-z.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtu.be/h5jz8xdpR0M">Bishop Briggs - River</a></figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/41.jpg" itemprop="contentUrl" data-size="1280x1920">
+        <img src="static/images/41.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"Part of growing up means finding a way to interact with others while distancing pain." - Misato Katsuragi, Neon Genesis Evangelion</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/41-z.jpg" itemprop="contentUrl" data-size="958x1280">
+        <img src="static/images/41-z.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"I dislike situations where I know for sure If I’m going to win or lose. Because it’s not really gambling." – Yumeko Jabami, Kakegurui</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/42.jpg" itemprop="contentUrl" data-size="1280x1727">
+        <img src="static/images/42.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"I read in some book that sad and painful things are the spices of an enjoyable life... But I seem to get nothing but spices!" - Tomoko Kuroki, WataMote</figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/43.jpg" itemprop="contentUrl" data-size="1280x854">
+        <img src="static/images/43.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"The reason he seems so withdrawn is because he’s afraid of being hurt." - Ritsuko Akagi, Neon Genesis Evangelion</figcaption>
+    </figure>
+
+    <figure class="hor" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/44.jpg" itemprop="contentUrl" data-size="1280x960">
+        <img src="static/images/44.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtube.com/playlist?list=PLH1JGOJgZ2u2J7bRnfjl-7kDj_vQKTPa6">Portishead - Dummy</a></figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/45.jpg" itemprop="contentUrl" data-size="1280x1920">
+        <img src="static/images/45.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description">"When a man aspires to greatness, he must also bear a great burden." - Casca, Berserk</figcaption>
+    </figure>
+
+    <figure class="ver" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="static/images/46.jpg" itemprop="contentUrl" data-size="1280x1790">
+        <img src="static/images/46.jpg" itemprop="thumbnail" alt="" />
+      </a>
+      <figcaption itemprop="caption description"><a href="https://youtu.be/cWQbNb39lgc">CRIM3S - still goin</a></figcaption>
+    </figure>
+  </div>
+
+  <script type="text/javascript">
+    var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+      // parse slide data (url, title, size ...) from DOM elements 
+      // (children of gallerySelector)
+      var parseThumbnailElements = function(el) {
+        var thumbElements = el.childNodes,
+            numNodes = thumbElements.length,
+            items = [],
+            figureEl,
+            linkEl,
+            size,
+            item;
+
+        for(var i = 0; i < numNodes; i++) {
+
+          figureEl = thumbElements[i]; // <figure> element
+
+          // include only element nodes 
+          if(figureEl.nodeType !== 1) {
+            continue;
+          }
+
+          linkEl = figureEl.children[0]; // <a> element
+
+          size = linkEl.getAttribute('data-size').split('x');
+
+          // create slide object
+          item = {
+            src: linkEl.getAttribute('href'),
+            w: parseInt(size[0], 10),
+            h: parseInt(size[1], 10)
+          };
+
+
+
+          if(figureEl.children.length > 1) {
+            // <figcaption> content
+            item.title = figureEl.children[1].innerHTML; 
+          }
+
+          if(linkEl.children.length > 0) {
+            // <img> thumbnail element, retrieving thumbnail url
+            item.msrc = linkEl.children[0].getAttribute('src');
+          } 
+
+          item.el = figureEl; // save link to element for getThumbBoundsFn
+          items.push(item);
+        }
+
+        return items;
+      };
+
+      // find nearest parent element
+      var closest = function closest(el, fn) {
+        return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+      };
+
+      // triggers when user clicks on thumbnail
+      var onThumbnailsClick = function(e) {
+        e = e || window.event;
+        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+        var eTarget = e.target || e.srcElement;
+
+        // find root element of slide
+        var clickedListItem = closest(eTarget, function(el) {
+          return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+        });
+
+        if(!clickedListItem) {
+          return;
+        }
+
+        // find index of clicked item by looping through all child nodes
+        // alternatively, you may define index via data- attribute
+        var clickedGallery = clickedListItem.parentNode,
+            childNodes = clickedListItem.parentNode.childNodes,
+            numChildNodes = childNodes.length,
+            nodeIndex = 0,
+            index;
+
+        for (var i = 0; i < numChildNodes; i++) {
+          if(childNodes[i].nodeType !== 1) { 
+            continue; 
+          }
+
+          if(childNodes[i] === clickedListItem) {
+            index = nodeIndex;
+            break;
+          }
+          nodeIndex++;
+        }
+
+
+
+        if(index >= 0) {
+          // open PhotoSwipe if valid index found
+          openPhotoSwipe( index, clickedGallery );
+        }
+        return false;
+      };
+
+      // parse picture index and gallery index from URL (#&pid=1&gid=2)
+      var photoswipeParseHash = function() {
+        var hash = window.location.hash.substring(1),
+        params = {};
+
+        if(hash.length < 5) {
+          return params;
+        }
+
+        var vars = hash.split('&');
+        for (var i = 0; i < vars.length; i++) {
+          if(!vars[i]) {
+            continue;
+          }
+          var pair = vars[i].split('=');  
+          if(pair.length < 2) {
+            continue;
+          }           
+          params[pair[0]] = pair[1];
+        }
+
+        if(params.gid) {
+          params.gid = parseInt(params.gid, 10);
+        }
+
+        return params;
+      };
+
+      var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+        var pswpElement = document.querySelectorAll('.pswp')[0],
+            gallery,
+            options,
+            items;
+
+        items = parseThumbnailElements(galleryElement);
+
+        // define options (if needed)
+        options = {
+
+          // define gallery index (for URL)
+          galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+          getThumbBoundsFn: function(index) {
+            // See Options -> getThumbBoundsFn section of documentation for more info
+            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                rect = thumbnail.getBoundingClientRect(); 
+
+            return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+          }
+
+        };
+
+        // PhotoSwipe opened from URL
+        if(fromURL) {
+          if(options.galleryPIDs) {
+            // parse real index when custom PIDs are used 
+            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+            for(var j = 0; j < items.length; j++) {
+              if(items[j].pid == index) {
+                options.index = j;
+                break;
+              }
+            }
+          } else {
+              // in URL indexes start from 1
+              options.index = parseInt(index, 10) - 1;
+            }
+        } else {
+          options.index = parseInt(index, 10);
+        }
+
+        // exit if index not found
+        if( isNaN(options.index) ) {
+          return;
+        }
+
+        if(disableAnimation) {
+          options.showAnimationDuration = 0;
+        }
+
+        // Pass data to PhotoSwipe and initialize it
+        gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+        gallery.init();
+      };
+
+      // loop through all gallery elements and bind events
+      var galleryElements = document.querySelectorAll( gallerySelector );
+
+      for(var i = 0, l = galleryElements.length; i < l; i++) {
+        galleryElements[i].setAttribute('data-pswp-uid', i+1);
+        galleryElements[i].onclick = onThumbnailsClick;
+      }
+
+      // Parse URL and open gallery if it contains #&pid=3&gid=1
+      var hashData = photoswipeParseHash();
+      if(hashData.pid && hashData.gid) {
+        openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+      }
+    };
+
+    // execute above function
+    initPhotoSwipeFromDOM('.my-gallery');
+  </script>
+</body>
+</html>
